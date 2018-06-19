@@ -1,0 +1,10 @@
+C:\Users\Asscher\source\repos\calstack\calstack\bin\Debug\calstack.exe.config
+C:\Users\Asscher\source\repos\calstack\calstack\bin\Debug\calstack.exe
+C:\Users\Asscher\source\repos\calstack\calstack\bin\Debug\calstack.pdb
+C:\Users\Asscher\source\repos\calstack\calstack\obj\Debug\calstack.csprojAssemblyReference.cache
+C:\Users\Asscher\source\repos\calstack\calstack\obj\Debug\calstack.Properties.Resources.resources
+C:\Users\Asscher\source\repos\calstack\calstack\obj\Debug\calstack.csproj.GenerateResource.cache
+C:\Users\Asscher\source\repos\calstack\calstack\obj\Debug\calstack.csproj.CoreCompileInputs.cache
+C:\Users\Asscher\source\repos\calstack\calstack\obj\Debug\calstack.exe
+C:\Users\Asscher\source\repos\calstack\calstack\obj\Debug\calstack.pdb
+C:\Users\Asscher\source\repos\calstack\calstack\obj\Debug\calstack.Form1.resources
