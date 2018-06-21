@@ -18,3 +18,10 @@ D:\hpcalculator\calstack\calstack\obj\Debug\calstack.csproj.GenerateResource.cac
 D:\hpcalculator\calstack\calstack\obj\Debug\calstack.csproj.CoreCompileInputs.cache
 D:\hpcalculator\calstack\calstack\obj\Debug\calstack.exe
 D:\hpcalculator\calstack\calstack\obj\Debug\calstack.pdb
+C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.csprojAssemblyReference.cache
+C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.Form1.resources
+C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.Properties.Resources.resources
+C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.csproj.GenerateResource.cache
+C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.csproj.CoreCompileInputs.cache
+C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.exe
+C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.pdb

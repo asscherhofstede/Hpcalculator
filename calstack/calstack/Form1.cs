@@ -68,14 +68,14 @@ namespace calstack
         private void button_Click(object sender, EventArgs e)
         {
             Button ButtonThatWasPushed = (Button)sender;
-             //the button's Text
-                                                          //do something
+            //the button's Text
+            //do something
 
             //If you store the button's numeric value in it's Tag property
             //things become even easier.
             input += ButtonThatWasPushed.Text;
             TxtBox1.Text = input;
-            
+
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace calstack
                 if (i == 6)
                 {
                     b.Text = "(-)";
-                    b.Click += button_Click_Minus;
+                    b.Click += button_Click_Negative_Number;
                     b.Location = locationOperators;
                     Controls.Add(b);
                     locationOperators.Offset((b.Width + 5) * 2, 0);
@@ -99,10 +99,10 @@ namespace calstack
                 if (i == 5)
                 {
                     b.Text = "+";
-                    b.Click += button_Click_Minus;
+                    b.Click += button_Click_Count;
                     b.Location = locationOperators;
                     Controls.Add(b);
-                    locationOperators.Offset((b.Width + 5) , 0);
+                    locationOperators.Offset((b.Width + 5), 0);
                 }
                 if (i == 4)
                 {
@@ -110,9 +110,9 @@ namespace calstack
                     b.Click += button_Click_Subtract;
                     b.Location = locationOperators;
                     Controls.Add(b);
-                    locationOperators.Offset(0, (b.Height+5)*-1);
+                    locationOperators.Offset(0, (b.Height + 5) * -1);
                 }
-                if( i == 3)
+                if (i == 3)
                 {
                     b.Text = "*";
                     b.Click += button_Click_Multiply;
@@ -131,15 +131,26 @@ namespace calstack
                 if (i == 1)
                 {
                     b.Text = "=";
-                    b.Click += button_Click_Minus;
+                    b.Click += button_Click_Awnser;
                     b.Location = locationOperators;
                     Controls.Add(b);
                     locationOperators.Offset(0, (b.Height + 5) * -1);
                 }
-                
-                
+
+
             }
         }
+
+        private void button_Click_Negative_Number(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button_Click_Count(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
 
         private void button_Click_Minus(object sender, EventArgs e)
         {
@@ -151,15 +162,6 @@ namespace calstack
             {
                 input = input + "-";
                 TxtBox1.Text = input;
-            }
-        }
-        private void button_Click_Divide(object sender, EventArgs e)
-        {
-            //Check of er 2 getallen op de gekozen stack staan.
-            if (a && Classes.ArrayStack.array.Length > 1)
-            {
-                Classes.ArrayStack.arrStack.Push(Classes.ArrayStack.array);
-                RefreshArrayStack();
             }
         }
 
@@ -187,6 +189,29 @@ namespace calstack
                 Classes.ArrayStack.StackArray.Push(sum);
                 RefreshArrayStack();
             }
+        }
+        private void button_Click_Divide(object sender, EventArgs e)
+        {
+            //Check of er 2 getallen op de gekozen stack staan.
+            if (a && Classes.ArrayStack.array.Length > 1)
+            {
+                Classes.ArrayStack.arrStack.Push(Classes.ArrayStack.array);
+                RefreshArrayStack();
+            }
+        }
+        private void button_Click_Awnser(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void StackPushButton_Click(object sender, EventArgs e)
+        {
+            TxtBox2.Text = TxtBox1.Text;
+        }
+
+        private void StackPopButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
