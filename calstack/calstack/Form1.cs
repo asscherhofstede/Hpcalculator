@@ -106,8 +106,8 @@ namespace calstack
                 }
                 if (i == 4)
                 {
-                    b.Text = "=";
-                    b.Click += button_Click_Minus;
+                    b.Text = "-";
+                    b.Click += button_Click_Subtract;
                     b.Location = locationOperators;
                     Controls.Add(b);
                     locationOperators.Offset(0, (b.Height+5)*-1);
@@ -115,7 +115,7 @@ namespace calstack
                 if( i == 3)
                 {
                     b.Text = "*";
-                    b.Click += button_Click_Minus;
+                    b.Click += button_Click_Multiply;
                     b.Location = locationOperators;
                     Controls.Add(b);
                     locationOperators.Offset(0, (b.Height + 5) * -1);
@@ -123,7 +123,7 @@ namespace calstack
                 if (i == 2)
                 {
                     b.Text = "/";
-                    b.Click += button_Click_Minus;
+                    b.Click += button_Click_Divide;
                     b.Location = locationOperators;
                     Controls.Add(b);
                     locationOperators.Offset(0, (b.Height + 5) * -1);
@@ -143,18 +143,50 @@ namespace calstack
 
         private void button_Click_Minus(object sender, EventArgs e)
         {
-            Button ButtonThatWasPushed = (Button)sender;
-            //the button's Text
-            //do something
-
-            //If you store the button's numeric value in it's Tag property
-            //things become even easier.
-            input = ButtonThatWasPushed.Text;
-            if (TxtBox1.Text == null)
+            if (TxtBox1.Text.Contains("-"))
             {
-                
+                return;
             }
-            TxtBox1.Text += input;
+            else
+            {
+                input = input + "-";
+                TxtBox1.Text = input;
+            }
+        }
+        private void button_Click_Divide(object sender, EventArgs e)
+        {
+            //Check of er 2 getallen op de gekozen stack staan.
+            if (a && Classes.ArrayStack.array.Length > 1)
+            {
+                Classes.ArrayStack.arrStack.Push(Classes.ArrayStack.array);
+                RefreshArrayStack();
+            }
+        }
+
+        private void button_Click_Multiply(object sender, EventArgs e)
+        {
+            //Check of er 2 getallen op de gekozen stack staan.
+            if (a && Classes.ArrayStack.StackArray.Count > 1)
+            {
+                value2 = Classes.ArrayStack.StackArray.Pop();
+                value1 = Classes.ArrayStack.StackArray.Pop();
+                sum = Classes.Operator.Multiply(value1, value2);
+                Classes.ArrayStack.StackArray.Push(sum);
+                RefreshArrayStack();
+            }
+        }
+
+        private void button_Click_Subtract(object sender, EventArgs e)
+        {
+            //Check of er 2 getallen op de gekozen stack staan.
+            if (a && Classes.ArrayStack.StackArray.Count > 1)
+            {
+                value2 = Classes.ArrayStack.StackArray.Pop();
+                value1 = Classes.ArrayStack.StackArray.Pop();
+                sum = Classes.Operator.Subtract(value1, value2);
+                Classes.ArrayStack.StackArray.Push(sum);
+                RefreshArrayStack();
+            }
         }
     }
 }

@@ -33,13 +33,16 @@
             this.MyStack = new System.Windows.Forms.RadioButton();
             this.ArrayStack = new System.Windows.Forms.RadioButton();
             this.MyListStack = new System.Windows.Forms.RadioButton();
+            this.StackPushButton = new System.Windows.Forms.Button();
+            this.StackPopButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtBox1
             // 
-            this.TxtBox1.Location = new System.Drawing.Point(57, 72);
+            this.TxtBox1.Location = new System.Drawing.Point(59, 33);
+            this.TxtBox1.Multiline = true;
             this.TxtBox1.Name = "TxtBox1";
-            this.TxtBox1.Size = new System.Drawing.Size(190, 22);
+            this.TxtBox1.Size = new System.Drawing.Size(204, 48);
             this.TxtBox1.TabIndex = 0;
             // 
             // TxtBox2
@@ -53,7 +56,7 @@
             // MyStack
             // 
             this.MyStack.AutoSize = true;
-            this.MyStack.Location = new System.Drawing.Point(319, 45);
+            this.MyStack.Location = new System.Drawing.Point(329, 361);
             this.MyStack.Name = "MyStack";
             this.MyStack.Size = new System.Drawing.Size(82, 21);
             this.MyStack.TabIndex = 5;
@@ -64,7 +67,7 @@
             // ArrayStack
             // 
             this.ArrayStack.AutoSize = true;
-            this.ArrayStack.Location = new System.Drawing.Point(319, 72);
+            this.ArrayStack.Location = new System.Drawing.Point(329, 388);
             this.ArrayStack.Name = "ArrayStack";
             this.ArrayStack.Size = new System.Drawing.Size(98, 21);
             this.ArrayStack.TabIndex = 6;
@@ -75,7 +78,7 @@
             // MyListStack
             // 
             this.MyListStack.AutoSize = true;
-            this.MyListStack.Location = new System.Drawing.Point(319, 99);
+            this.MyListStack.Location = new System.Drawing.Point(329, 415);
             this.MyListStack.Name = "MyListStack";
             this.MyListStack.Size = new System.Drawing.Size(104, 21);
             this.MyListStack.TabIndex = 7;
@@ -83,11 +86,31 @@
             this.MyListStack.Text = "MyListStack";
             this.MyListStack.UseVisualStyleBackColor = true;
             // 
+            // StackPushButton
+            // 
+            this.StackPushButton.Location = new System.Drawing.Point(291, 29);
+            this.StackPushButton.Name = "StackPushButton";
+            this.StackPushButton.Size = new System.Drawing.Size(93, 31);
+            this.StackPushButton.TabIndex = 8;
+            this.StackPushButton.Text = "> >";
+            this.StackPushButton.UseVisualStyleBackColor = true;
+            // 
+            // StackPopButton
+            // 
+            this.StackPopButton.Location = new System.Drawing.Point(291, 71);
+            this.StackPopButton.Name = "StackPopButton";
+            this.StackPopButton.Size = new System.Drawing.Size(93, 31);
+            this.StackPopButton.TabIndex = 9;
+            this.StackPopButton.Text = "< <";
+            this.StackPopButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.StackPopButton);
+            this.Controls.Add(this.StackPushButton);
             this.Controls.Add(this.MyListStack);
             this.Controls.Add(this.ArrayStack);
             this.Controls.Add(this.MyStack);
@@ -107,6 +130,8 @@
         private System.Windows.Forms.RadioButton MyStack;
         private System.Windows.Forms.RadioButton ArrayStack;
         private System.Windows.Forms.RadioButton MyListStack;
+        private System.Windows.Forms.Button StackPushButton;
+        private System.Windows.Forms.Button StackPopButton;
     }
 }
 
