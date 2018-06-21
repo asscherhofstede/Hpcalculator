@@ -12,6 +12,7 @@ namespace calstack
 {
     public partial class Form1 : Form
     {
+        
         Point locationNumbers = new Point(20, 265);
         Point locationOperators = new Point(20, 265);
         string input = "";
@@ -22,6 +23,7 @@ namespace calstack
             ClientSize = new Size(800, 450);
             LoadButtons();
             LoadOperators();
+            
         }
         /// <summary>
         /// Het laden van de buttons met de nummers
@@ -30,6 +32,7 @@ namespace calstack
         {
             for (int i = 10; i > 0; i--)
             {
+                
                 //voor de 0 button
                 if (i == 10)
                 {
@@ -143,12 +146,23 @@ namespace calstack
 
         private void button_Click_Negative_Number(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (TxtBox1.Text.Contains("-"))
+            {
+
+            }
         }
 
         private void button_Click_Count(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (TxtBox1.Text.Contains("-"))
+            {
+                return;
+            }
+            else
+            {
+                input = input + "-";
+                TxtBox1.Text = input;
+            }
         }
 
 
@@ -167,7 +181,7 @@ namespace calstack
 
         private void button_Click_Multiply(object sender, EventArgs e)
         {
-            //Check of er 2 getallen op de gekozen stack staan.
+            /*Check of er 2 getallen op de gekozen stack staan.
             if (a && Classes.ArrayStack.StackArray.Count > 1)
             {
                 value2 = Classes.ArrayStack.StackArray.Pop();
@@ -175,12 +189,12 @@ namespace calstack
                 sum = Classes.Operator.Multiply(value1, value2);
                 Classes.ArrayStack.StackArray.Push(sum);
                 RefreshArrayStack();
-            }
+            }*/
         }
 
         private void button_Click_Subtract(object sender, EventArgs e)
         {
-            //Check of er 2 getallen op de gekozen stack staan.
+            /*Check of er 2 getallen op de gekozen stack staan.
             if (a && Classes.ArrayStack.StackArray.Count > 1)
             {
                 value2 = Classes.ArrayStack.StackArray.Pop();
@@ -188,16 +202,16 @@ namespace calstack
                 sum = Classes.Operator.Subtract(value1, value2);
                 Classes.ArrayStack.StackArray.Push(sum);
                 RefreshArrayStack();
-            }
+            }*/
         }
         private void button_Click_Divide(object sender, EventArgs e)
         {
-            //Check of er 2 getallen op de gekozen stack staan.
+            /*Check of er 2 getallen op de gekozen stack staan.
             if (a && Classes.ArrayStack.array.Length > 1)
             {
                 Classes.ArrayStack.arrStack.Push(Classes.ArrayStack.array);
                 RefreshArrayStack();
-            }
+            }*/
         }
         private void button_Click_Awnser(object sender, EventArgs e)
         {
@@ -206,12 +220,56 @@ namespace calstack
 
         private void StackPushButton_Click(object sender, EventArgs e)
         {
-            TxtBox2.Text = TxtBox1.Text;
+            input = TxtBox1.Text;
+            TxtBox2.Text = input;
+            TxtBox1.Text = "";
+            Presistence.Value = Convert.ToInt32(input);
+
+
         }
 
         private void StackPopButton_Click(object sender, EventArgs e)
         {
+            TxtBox1.Text = input;
+            if (input == null)
+            {
+                return;
+            }
+            else if(true)
+            {
+                
+            }
+        }
 
+        private void MyStack_CheckedChanged(object sender, EventArgs e)
+        {
+            if (MyStackRadioButton.Checked == true)
+            {
+                Presistence.ListstackRB = true;
+                Presistence.MyListStackRB = false;
+                Presistence.MyArrayStackRB = false;
+            }
+
+        }
+
+        private void ArrayStack_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ArrayStackRadioButton.Checked == true)
+            {
+                Presistence.ListstackRB = false;
+                Presistence.MyListStackRB = false;
+                Presistence.MyArrayStackRB = true;
+            }
+        }
+
+        private void MyListStack_CheckedChanged(object sender, EventArgs e)
+        {
+            if (MyListStackRadioButton.Checked == true)
+            {
+                Presistence.ListstackRB = false;
+                Presistence.MyListStackRB = true;
+                Presistence.MyArrayStackRB = false;
+            }
         }
     }
 }

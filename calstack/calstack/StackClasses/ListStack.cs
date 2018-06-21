@@ -8,5 +8,9 @@ namespace calstack
 {
     class ListStack
     {
+        public void List()
+        {
+
+        }
     }
 }

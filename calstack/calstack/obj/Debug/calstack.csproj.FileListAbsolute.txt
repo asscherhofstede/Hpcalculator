@@ -25,3 +25,6 @@ C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.csproj.Generat
 C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.csproj.CoreCompileInputs.cache
 C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.exe
 C:\Users\asscher\Programeren\calstack\calstack\obj\Debug\calstack.pdb
+C:\Users\asscher\Programeren\calstack\calstack\bin\Debug\calstack.exe.config
+C:\Users\asscher\Programeren\calstack\calstack\bin\Debug\calstack.exe
+C:\Users\asscher\Programeren\calstack\calstack\bin\Debug\calstack.pdb
