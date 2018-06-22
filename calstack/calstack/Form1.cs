@@ -154,14 +154,24 @@ namespace calstack
 
         private void button_Click_Count(object sender, EventArgs e)
         {
-            if (TxtBox1.Text.Contains("-"))
+            if (Presistence.MyListStackRB == true)
             {
-                return;
+                if (a && Classes.ArrayStack.StackArray.Count > 1)
+                {
+                    value2 = Classes.ArrayStack.StackArray.Pop();
+                    value1 = Classes.ArrayStack.StackArray.Pop();
+                    sum = Classes.Operator.Multiply(value1, value2);
+                    Classes.ArrayStack.StackArray.Push(sum);
+                    RefreshArrayStack();
+                }
             }
-            else
+            else if (Presistence.MyArrayStackRB == true)
             {
-                input = input + "-";
-                TxtBox1.Text = input;
+
+            }
+            else if (Presistence.ListstackRB == true)
+            {
+
             }
         }
 
@@ -181,6 +191,18 @@ namespace calstack
 
         private void button_Click_Multiply(object sender, EventArgs e)
         {
+            if (Presistence.MyListStackRB == true)
+            {
+
+            }
+            else if (Presistence.MyArrayStackRB == true)
+            {
+
+            }
+            else if (Presistence.ListstackRB == true)
+            {
+
+            }
             /*Check of er 2 getallen op de gekozen stack staan.
             if (a && Classes.ArrayStack.StackArray.Count > 1)
             {

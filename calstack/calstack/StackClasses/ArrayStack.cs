@@ -17,7 +17,7 @@ namespace calstack
 
         public override void Pop()
         {
-            throw new NotImplementedException();
+            
         }
 
         public override void Push()

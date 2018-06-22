@@ -12,5 +12,7 @@ namespace calstack
         public static bool MyListStackRB;
         public static bool ListstackRB;
         public static bool MyArrayStackRB;
+        public static int ValuePop1;
+        public static int ValuePop2;
     }
 }
